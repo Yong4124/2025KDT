@@ -8,14 +8,15 @@
 </head>
 <body>
 	<p id="text">이 문장의 색상을 바꿔보세요.</p>
-	<button onclick="changeColor()">색상 변경</button>
+	<button id="colorBtn">색상 변경</button>
 	
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script>
-	 function changeColor(){
-		 document.getElementById("text").style.color = "blue";
-	 }
+	$(document).ready(function(){
+		$('#colorBtn').click(function() {
+			$('#text').css('color', 'blue');
+		});
+	});
 	</script>
-
 </body>
 </html>
