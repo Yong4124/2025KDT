@@ -27,4 +27,15 @@ public class HelloController {
 		model.addAttribute("mem", member);
 		return "result";
 	}
+	
+	@GetMapping("/insertForm")
+	public String insertForm() {
+		return "insertForm";
+	}
+	
+	@GetMapping("/insert")
+	public String insert(String name, String email, String password, String regdate) {
+		System.out.println(name + ", " + email + ", " + password + ", " + regdate);
+		return "insertOk";
+	}
 }
